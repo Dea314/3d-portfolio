@@ -12,6 +12,14 @@ module.exports = {
         "black-200": "#090325",
         "white-100": "#f3f3f3", */
       },
+      spacing: {
+        sm: "8px",
+        md: "16px",
+        lg: "24px",
+        xl: "48px",
+        "2xl": "96px",
+      },
+
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
       },

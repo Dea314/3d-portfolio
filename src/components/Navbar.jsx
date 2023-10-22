@@ -32,7 +32,7 @@ const Navbar = () => {
             <span className="md:block hidden">|&nbsp; 3D portfolio</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-10 sm:flex-wrap sm:justify-end">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -46,7 +46,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <Toggle />
+        <div className="sm:hidden flex  justify-end items-center mr-8 ">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -63,7 +64,7 @@ const Navbar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-white" : "text-secondary"
+                    active === link.title ? "text-dark" : "text-primary"
                   } font-prompt text-[16px] font-medium cursor pointer `}
                   /* nav menu active links */
                   onClick={() => {
@@ -77,7 +78,6 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <Toggle />
       </div>
     </nav>
   );

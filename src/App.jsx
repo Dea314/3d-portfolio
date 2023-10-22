@@ -15,7 +15,7 @@ import Scroll from "./components/canvas/Scroll";
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
+      <div className="container ml-[36px] mr-[42px]">
         {/*  relative z-0  */}
         {/* bg-primary   nav bkg */}
         <div className="">

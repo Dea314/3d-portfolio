@@ -20,7 +20,7 @@ const Part = (props) => {
       delay: 0,
       fullScreen: {
         enable: false,
-        zIndex: -10,
+        zIndex: 0,
       },
       detectRetina: true,
       duration: 0,
@@ -92,18 +92,18 @@ const Part = (props) => {
             },
           },
           attract: {
-            distance: 200,
-            duration: 0.4,
+            distance: 70,
+            duration: 700,
             easing: "ease-out-quad",
             factor: 1,
             maxSpeed: 50,
-            speed: 1,
+            speed: 100,
           },
           bounce: {
-            distance: 200,
+            distance: 20,
           },
           bubble: {
-            distance: 200,
+            distance: 70,
             duration: 0.4,
             mix: false,
             divs: {
@@ -114,7 +114,7 @@ const Part = (props) => {
             },
           },
           connect: {
-            distance: 80,
+            distance: 50,
             links: {
               opacity: 0.5,
             },
@@ -173,7 +173,7 @@ const Part = (props) => {
               color: {
                 value: "#000000",
               },
-              length: 2000,
+              length: 7000,
             },
           },
         },
@@ -198,7 +198,7 @@ const Part = (props) => {
         },
         collisions: {
           absorb: {
-            speed: 2,
+            speed: 20,
           },
           bounce: {
             horizontal: {
@@ -217,7 +217,7 @@ const Part = (props) => {
             },
           },
           enable: false,
-          maxSpeed: 50,
+          maxSpeed: 500,
           mode: "bounce",
           overlap: {
             enable: true,
@@ -260,14 +260,14 @@ const Part = (props) => {
         move: {
           angle: {
             offset: 0,
-            value: 90,
+            value: 100,
           },
           attract: {
-            distance: 200,
+            distance: 20,
             enable: false,
             rotate: {
-              x: 3000,
-              y: 3000,
+              x: 300,
+              y: 300,
             },
           },
           center: {
@@ -328,8 +328,8 @@ const Part = (props) => {
             width: 1920,
             height: 1080,
           },
-          limit: 0,
-          value: 100,
+          limit: 500,
+          value: 270,
         },
         opacity: {
           random: {
