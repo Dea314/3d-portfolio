@@ -13,7 +13,7 @@ const styles = {
   sectionSubText:
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
 
-  cube: "position-sticky my-8 top-0 left-0 h-full w-full z-[-1]",
+  cube: "my-8 top-0 left-0 h-full w-full ",
 };
 
 export { styles };

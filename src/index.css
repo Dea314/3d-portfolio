@@ -27,6 +27,10 @@ nav ul li a:hover {
   color: var(--accent);
 }
 
+#root img {
+  height: 5rem;
+}
+
 /* CONTAINER MAIN */
 .container-main {
   width: 100vw;

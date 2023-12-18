@@ -1,20 +1,15 @@
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import {
-  TextureLoader,
-  BoxGeometry,
-  DoubleSide,
-  MeshStandardMaterial,
-} from "three";
+import { TextureLoader } from "three";
 import { styles } from "../../styles";
-import { useRef } from "react";
-import more2 from "./siders/more2.jpg";
+import { useEffect, useRef } from "react";
+import blog from "./siders/blog.jpg";
+import athens from "./siders/athens.jpg";
+import toys from "./siders/toys.png";
+import log from "./siders/log.png";
 import more from "./siders/more.jpg";
-import fall from "./siders/fall.jpg";
-import jammu from "./siders/jammu.jpg";
-import munnar from "./siders/munnar.jpg";
-import campsites from "./siders/campsites.jpg";
+import tortilla from "./siders/tortilla.jpg";
 import { motion } from "framer-motion";
-import { OrbitControls, useMotion } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { useMotionValue } from "framer-motion";
 
 export default function index() {
@@ -22,7 +17,7 @@ export default function index() {
     <div className={styles.cube}>
       <Canvas>
         <OrbitControls enableZoom={false} enablePan={false} />
-        <ambientLight intensity={2} />
+        <ambientLight intensity={3} />
         <directionalLight position={[2, 1, 1]} />
         <Cube />
       </Canvas>
@@ -40,23 +35,37 @@ function Cube() {
   const manageMouseMove = (e) => {
     const { innerWidth, innerHeight } = window;
     const { clientX, clientY } = e;
-    const x = clientX / innerWidth;
+    const x = -0.5 + clientX / innerWidth;
     const y = clientY / innerHeight;
     mouse.x.set(x);
     mouse.y.set(y);
   };
-  /*  useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.005)); */
 
-  const texture_1 = useLoader(TextureLoader, more);
-  const texture_2 = useLoader(TextureLoader, more2);
-  const texture_3 = useLoader(TextureLoader, jammu);
-  const texture_4 = useLoader(TextureLoader, munnar);
-  const texture_5 = useLoader(TextureLoader, fall);
-  const texture_6 = useLoader(TextureLoader, campsites);
+  useEffect(() => {
+    window.addEventListener("mousemove", manageMouseMove);
+    return () => window.removeEventListener("mousemove", manageMouseMove);
+  }, []);
+
+  /* useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.005)); */
+
+  useFrame((state, delta) => {
+    const targetRotationZ = Math.PI / 4;
+    mesh.current.rotation.x +=
+      (targetRotationZ - mesh.current.rotation.x) * 0.05;
+    mesh.current.rotation.z +=
+      (targetRotationZ - mesh.current.rotation.z) * 0.05;
+  });
+
+  const texture_1 = useLoader(TextureLoader, toys);
+  const texture_2 = useLoader(TextureLoader, tortilla);
+  const texture_3 = useLoader(TextureLoader, log);
+  const texture_4 = useLoader(TextureLoader, more);
+  const texture_5 = useLoader(TextureLoader, athens);
+  const texture_6 = useLoader(TextureLoader, blog);
 
   return (
-    <motion.mesh ref={mesh} rotation-x={mouse.x} roation-y={mouse.y}>
-      <boxGeometry args={[3, 3, 3]} />
+    <motion.mesh ref={mesh} rotation-x={mouse.y} roation-y={mouse.x}>
+      <boxGeometry args={[3.5, 3.5, 3.5]} />
       <meshStandardMaterial map={texture_1} attach="material-0" />
       <meshStandardMaterial map={texture_2} attach="material-1" />
       <meshStandardMaterial map={texture_3} attach="material-2" />

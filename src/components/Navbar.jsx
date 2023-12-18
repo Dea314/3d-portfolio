@@ -16,23 +16,19 @@ const Navbar = () => {
       <div className="w-full flex items-center justify-between max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-4"
+          className="flex items-center gap-2"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <img
-            src={logo}
-            alt="logo"
-            className="w-11 h-11 object-contain mr-2"
-          />
+          <img src={logo} alt="logo" className="h-12 object-contain " />
           <p className="text-[22px] font-bold cursor-pointer flex">
             Dea314 &nbsp;
             <span className="md:block hidden">|&nbsp; 3D portfolio</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10 sm:flex-wrap sm:justify-end">
+        <ul className="list-none hidden sm:flex flex-row gap-9 sm:flex-wrap sm:justify-end">
           {navLinks.map((link) => (
             <li
               key={link.id}

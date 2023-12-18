@@ -231,7 +231,7 @@ const Part = (props) => {
               count: 0,
               enable: true,
               offset: 0,
-              speed: 50,
+              speed: 100,
               delay: 0,
               decay: 0,
               sync: false,
@@ -308,7 +308,7 @@ const Part = (props) => {
           },
           random: false,
           size: false,
-          speed: 2,
+          speed: 1, // speed of particles
           spin: {
             acceleration: 0,
             enable: false,
@@ -329,7 +329,7 @@ const Part = (props) => {
             height: 1080,
           },
           limit: 500,
-          value: 270,
+          value: 200,
         },
         opacity: {
           random: {
@@ -383,7 +383,7 @@ const Part = (props) => {
           animation: {
             count: 0,
             enable: true,
-            speed: 3,
+            speed: 30,
             decay: 0,
             delay: 0,
             sync: false,
