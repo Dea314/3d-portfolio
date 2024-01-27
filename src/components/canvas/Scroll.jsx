@@ -25,7 +25,7 @@ const Scroll = () => {
   return (
     <div>
       {isVisible && (
-        <button className="btn btn-position  " onClick={scrollToTop}>
+        <button className="btn btn-position" onClick={scrollToTop}>
           Top
         </button>
       )}

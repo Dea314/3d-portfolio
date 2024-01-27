@@ -11,6 +11,7 @@ import tortilla from "./siders/tortilla.jpg";
 import { motion } from "framer-motion";
 import { OrbitControls } from "@react-three/drei";
 import { useMotionValue } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function index() {
   return (
@@ -48,6 +49,10 @@ function Cube() {
 
   /* useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.005)); */
 
+  const handleFaceClick = (link) => {
+    window.location.href = link;
+  };
+
   useFrame((state, delta) => {
     const targetRotationZ = Math.PI / 4;
     mesh.current.rotation.x +=
@@ -75,3 +80,45 @@ function Cube() {
     </motion.mesh>
   );
 }
+
+/*  const textures = [
+    {
+      texture: useLoader(TextureLoader, toys),
+      link: "https://discourse.threejs.org/t/mapping-text-onto-faces-of-cube/25358",
+    },
+    {
+      texture: useLoader(TextureLoader, tortilla),
+      link: "https://threejs.org/docs/#api/en/loaders/ObjectLoader",
+    },
+    {
+      texture: useLoader(TextureLoader, log),
+      link: "https://threejs.org/docs/#api/en/loaders/ObjectLoader",
+    },
+    {
+      texture: useLoader(TextureLoader, more),
+      link: "https://threejs.org/docs/#api/en/loaders/ObjectLoader",
+    },
+    {
+      texture: useLoader(TextureLoader, athens),
+      link: "https://www.simplegermany.com/",
+    },
+    {
+      texture: useLoader(TextureLoader, blog),
+      link: "https://threejs.org/docs/#api/en/loaders/ObjectLoader",
+    },
+  ];
+  return (
+    <motion.mesh ref={mesh} rotation-x={mouse.y} roation-y={mouse.x}>
+      {[...Array(6)].map((_, index) => (
+        <mesh key={index} onClick={() => handleFaceClick(textures[index].link)}>
+          <boxGeometry args={[3.5, 3.5, 3.5]} />
+          <meshStandardMaterial
+            map={textures[index].texture}
+            attach={`material-${index}`}
+          />
+        </mesh>
+      ))}
+    </motion.mesh>
+  );
+}
+ */
