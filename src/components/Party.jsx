@@ -20,21 +20,19 @@ const Party = () => {
       </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a
-          href="#about"
-          className="flex items-center justify-center gap-2 text-white text-[18px] font-medium cursor-pointer"
+        <p>
+          <a href="#intern">Scroll down</a>
+        </p>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-7 w-7 animate-bounce"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
         >
-          <p>Scroll down</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7 animate-bounce"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </a>
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
     </section>
   );

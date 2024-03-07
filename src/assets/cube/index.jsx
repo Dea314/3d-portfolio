@@ -11,9 +11,10 @@ import tortilla from "./siders/tortilla.jpg";
 import { motion } from "framer-motion";
 import { OrbitControls } from "@react-three/drei";
 import { useMotionValue } from "framer-motion";
-import { Link } from "react-router-dom";
 
-export default function index() {
+// 3D cube with 6 faces
+
+export default function Index() {
   return (
     <div className={styles.cube}>
       <Canvas>
