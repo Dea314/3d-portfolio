@@ -219,7 +219,36 @@ export default function App() {
 import React from "react";
 
 const Works = () => {
-  return <div>Works</div>;
+  return (
+    <div>
+      <h1>LOREM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+        dignissimos aut impedit. Perspiciatis numquam sequi quisquam quas dolore
+        nulla doloremque eveniet ullam quibusdam id. Officiis nam distinctio
+        tempore eligendi accusamus. Tenetur quas minus perspiciatis repellat
+        cumque optio illum, vel, id unde delectus nihil, aliquam rem? Error nam
+        dolores animi corporis quam tenetur nostrum commodi. Necessitatibus
+        dignissimos pariatur soluta. Doloribus non, voluptas incidunt ullam
+        excepturi repudiandae rerum dolorum similique ea culpa quos consequatur
+        accusamus dignissimos nulla deleniti blanditiis unde illum quaerat vitae
+        nesciunt reprehenderit reiciendis? Facilis numquam reprehenderit,
+        placeat dicta porro minima velit totam! Porro illo, explicabo ratione
+        quisquam voluptatem atque neque dolor adipisci eaque laboriosam repellat
+        quae quo soluta pariatur temporibus officiis quis a rem? Voluptate
+        facere magnam dignissimos optio repudiandae inventore autem, minus rerum
+        consectetur eius quos sunt expedita suscipit ducimus culpa molestias
+        veniam a quae. Laborum consequatur, amet rerum eum earum alias?
+        Laboriosam sapiente voluptatum assumenda autem atque sed hic deserunt
+        tempora explicabo eaque voluptates voluptate, placeat recusandae,
+        perferendis modi quos et quis quam eveniet quia ad excepturi quasi
+        voluptas! Dolorem, porro ipsam. Dolore veniam autem nisi sit obcaecati
+        optio praesentium, perspiciatis possimus nulla ea totam provident error
+        aut odio unde est cupiditate labore exercitationem velit nesciunt?
+        Dolorum?
+      </p>
+    </div>
+  );
 };
 
 export default Works;
